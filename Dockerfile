@@ -1,7 +1,7 @@
 FROM microsoft/dotnet:2.1-sdk AS build
 WORKDIR /code
 COPY . .
-RUN dotnet restore
+RUN dotnet restoregit add
 RUN dotnet publish --output /output --configuration Release
 
 FROM microsoft/dotnet:2.1-aspnetcore-runtime
